@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import AnimeTooltip from "./AnimeTooltip";
-import { rightHover } from '../utils';
+import { rightHover } from "../utils";
 
 const AnimeCard = ({ anime, idx }) => {
   return (
@@ -17,7 +17,7 @@ const AnimeCard = ({ anime, idx }) => {
           : anime?.title?.romaji}
       </span>
       <div className="anime-tooltip">
-        <AnimeTooltip anime={anime} rightHover={rightHover.includes(idx + 1)}/>
+        <AnimeTooltip anime={anime} rightHover={rightHover.includes(idx + 1)} />
       </div>
     </Link>
   );

@@ -23,7 +23,7 @@ const AnimeBarWrapper = styled.div`
   @media screen and (max-width: 760px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-		grid-gap: 1rem;
+    grid-gap: 1rem;
   }
 
   @media screen and (max-width: 500px) {
@@ -39,12 +39,12 @@ const AnimeBar = ({ anime }) => {
         <span>{getFormat(anime?.episodesList?.length)}</span>
       </div>
 
-			{anime?.format === "TV" && 
-				<div className="item">
-					<h4>Episodes</h4>
-					<span>{anime?.episodes}</span>
-				</div>
-			}
+      {anime?.format === "TV" && (
+        <div className="item">
+          <h4>Episodes</h4>
+          <span>{anime?.episodes}</span>
+        </div>
+      )}
 
       {anime?.format === "TV" ||
         (anime?.format === "MOVIE" && (
@@ -54,12 +54,12 @@ const AnimeBar = ({ anime }) => {
           </div>
         ))}
 
-			{anime?.status &&
-				<div className="item">
-					<h4>Status</h4>
-					<span>{titleCase(anime?.status)}</span>
-				</div>
-			}
+      {anime?.status && (
+        <div className="item">
+          <h4>Status</h4>
+          <span>{titleCase(anime?.status)}</span>
+        </div>
+      )}
 
       <div className="item">
         <h4>Start Date</h4>
@@ -96,7 +96,7 @@ const AnimeBar = ({ anime }) => {
 
       <div className="item">
         <h4>Genres</h4>
-				<span>{anime?.genres?.slice(0, 2)?.join(", ")}</span>
+        <span>{anime?.genres?.slice(0, 2)?.join(", ")}</span>
       </div>
     </AnimeBarWrapper>
   );

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
 import Container from "../styles/Container";
 import AnimeGrid from "../styles/AnimeGrid";
@@ -16,20 +16,20 @@ const Home = () => {
   }, [dispatch]);
 
   if (isFetching) {
-		return <Skeleton/>
+    return <Skeleton />;
   }
 
   return (
     <Container>
-			<Helmet>
-				<title>Recommended Animes &bull; AniX</title>
-			</Helmet>
+      <Helmet>
+        <title>Recommended Animes &bull; AniX</title>
+      </Helmet>
 
       <h2>Recommended</h2>
 
       <AnimeGrid>
         {animes.map((anime, idx) => (
-          <AnimeCard key={anime.slug} anime={anime} idx={idx}/>
+          <AnimeCard key={anime.slug} anime={anime} idx={idx} />
         ))}
       </AnimeGrid>
     </Container>

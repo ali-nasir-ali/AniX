@@ -49,16 +49,16 @@ const Wrapper = styled.div`
     }
   }
 
-	@media screen and (max-width: 400px) {
+  @media screen and (max-width: 400px) {
     .characters {
       grid-template-columns: repeat(3, 1fr);
     }
 
-		.avatar {
-			width: 88px;
-			height: 88px;
-		}
-	}
+    .avatar {
+      width: 88px;
+      height: 88px;
+    }
+  }
 `;
 
 const Characters = ({ characters }) => {

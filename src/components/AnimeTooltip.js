@@ -55,27 +55,26 @@ const Wrapper = styled.div`
     margin-bottom: auto;
   }
 
-	${props => props.rightHover && css`
-		left: -310px;
-		width: 290px;
-`}
+  ${(props) =>
+    props.rightHover &&
+    css`
+      left: -310px;
+      width: 290px;
+    `}
 `;
 
-const AnimeTooltip = ({ anime, rightHover=false }) => {
-
+const AnimeTooltip = ({ anime, rightHover = false }) => {
   return (
     <Wrapper rightHover={rightHover}>
       <h4>{anime?.title?.romaji}</h4>
 
       <div className="anime-info">
         <span>{getFormat(anime?.episodesList?.length)}</span>{" "}
-
-				{anime?.episodesList?.length && anime?.episodes > 1 && (
+        {anime?.episodesList?.length && anime?.episodes > 1 && (
           <>
             <span>&bull;</span> <span>{anime?.episodes} Episodes</span>
           </>
         )}
-
         {anime?.episodesList?.length === 1 && anime?.duration && (
           <>
             <span>&bull;</span>{" "}

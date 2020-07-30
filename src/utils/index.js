@@ -52,10 +52,28 @@ export const getFormat = (episodes) => {
   return episodes > 1 ? "TV" : "Movie";
 };
 
-// hover right side to the card 
+// hover right side to the card
 // for the items at the last column in a grid
 // is there any better way to do this ???
 export const rightHover = [
-	5, 10, 15, 20, 25, 30, 35, 40, 45, 50,
-	55, 60, 65, 70, 75, 80, 85, 90, 95, 100
-]
+  5,
+  10,
+  15,
+  20,
+  25,
+  30,
+  35,
+  40,
+  45,
+  50,
+  55,
+  60,
+  65,
+  70,
+  75,
+  80,
+  85,
+  90,
+  95,
+  100,
+];

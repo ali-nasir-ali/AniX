@@ -90,7 +90,7 @@ export const SkeletonPoster = styled(SkeletonPulse)`
   height: 305px;
   border-radius: 4px;
   margin-top: -125px;
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 
   @media screen and (max-width: 700px) {
     margin-top: -135px;
@@ -105,12 +105,12 @@ export const SkeletonDesc = styled(SkeletonLine)`
   margin-top: 1rem;
 
   @media screen and (max-width: 880px) {
-		height: 70px;
-		width: 25rem;
+    height: 70px;
+    width: 25rem;
   }
 
   @media screen and (max-width: 700px) {
-		width: 99%;
-		margin-bottom: 1rem;
+    width: 99%;
+    margin-bottom: 1rem;
   }
 `;

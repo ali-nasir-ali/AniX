@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import AnimeBar from "../components/AnimeBar";
@@ -82,15 +82,15 @@ export const AnimeWrapper = styled.div`
     border-radius: 4px;
   }
 
-	.trailer {
-		padding-bottom: 0.5rem;
-	}
+  .trailer {
+    padding-bottom: 0.5rem;
+  }
 
-	.trailer + iframe {
-		width: 99%;
-		height: 400px;
-		border-radius: 4px;
-	}
+  .trailer + iframe {
+    width: 99%;
+    height: 400px;
+    border-radius: 4px;
+  }
 
   @media screen and (max-width: 1093px) {
     .info-tab-content,
@@ -156,10 +156,10 @@ export const AnimeWrapper = styled.div`
   }
 
   @media screen and (max-width: 500px) {
-		.trailer + iframe {
-			height: 200px;
-		}
-	}
+    .trailer + iframe {
+      height: 200px;
+    }
+  }
 `;
 
 const Anime = () => {
@@ -173,7 +173,7 @@ const Anime = () => {
   const getWatch = () => setTab("watch");
 
   useEffect(() => {
-		window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
     dispatch(getAnime({ collection, slug }));
 
     return () => {
@@ -191,9 +191,11 @@ const Anime = () => {
 
   return (
     <AnimeWrapper>
-			<Helmet>
-				<title>{anime?.title?.english ? anime?.title?.english : anime?.title?.romaji}</title>
-			</Helmet>
+      <Helmet>
+        <title>
+          {anime?.title?.english ? anime?.title?.english : anime?.title?.romaji}
+        </title>
+      </Helmet>
 
       <img
         className="banner"
@@ -246,7 +248,7 @@ const Anime = () => {
             <Gallery episodes={anime?.streamingEpisodes} />
           )}
 
-					{tab === "overview" && anime?.characters?.nodes?.length > 1 && (
+          {tab === "overview" && anime?.characters?.nodes?.length > 1 && (
             <Characters characters={anime?.characters?.nodes} />
           )}
 
@@ -257,7 +259,7 @@ const Anime = () => {
               <iframe
                 title={anime?.trailer?.id}
                 src={`https://www.youtube.com/embed/${anime?.trailer?.id}`}
-								allowFullScreen
+                allowFullScreen
                 frameBorder="0"
               ></iframe>
             </>

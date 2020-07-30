@@ -15,14 +15,14 @@ const VideoPlayer = ({ src, pressed }) => {
     player.poster(anime?.bannerImage);
 
     if (src) {
-			player.src({
-				src,
-				type: 'video/mp4'
-			});
+      player.src({
+        src,
+        type: "video/mp4",
+      });
       player.play();
-		} else if(src === '' && pressed) {
-			player.reset();
-		}
+    } else if (src === "" && pressed) {
+      player.reset();
+    }
   });
 
   return (
