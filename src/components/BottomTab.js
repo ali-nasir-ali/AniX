@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import { HomeIcon, TrendingIcon, SearchIcon } from "./Icons";
+import { PopularIcon, HomeIcon, TrendingIcon, SearchIcon } from "./Icons";
 import ToggleTheme from "./ToggleTheme";
 import { openModal } from "../reducers/modal";
 import Modal from "./Modal";
@@ -17,19 +17,19 @@ const BottomTabWrapper = styled.div`
   z-index: 3;
   display: none;
 
-	.active svg {
-		fill: ${props => props.theme.orange};
-	}
+  .active svg {
+    fill: ${(props) => props.theme.orange};
+  }
 
   svg {
     fill: ${(props) => props.theme.primaryColor};
     cursor: pointer;
   }
 
-	.input-modal-content {
-		width: 90%;
-		margin: 200px auto;
-	}
+  .input-modal-content {
+    width: 90%;
+    margin: 200px auto;
+  }
 
   @media screen and (max-width: 430px) {
     display: block;
@@ -44,7 +44,7 @@ const BottomTab = () => {
 
   return (
     <BottomTabWrapper>
-			<NavLink exact to="/" activeClassName="active">
+      <NavLink exact to="/" activeClassName="active">
         <HomeIcon />
       </NavLink>
 
@@ -56,10 +56,14 @@ const BottomTab = () => {
       {modal && (
         <Modal>
           <div className="input-modal-content">
-            <Search />
+            <Search searchModal={true} />
           </div>
         </Modal>
       )}
+
+      <NavLink to="/popularanimes" activeClassName="active">
+        <PopularIcon />
+      </NavLink>
 
       <ToggleTheme />
     </BottomTabWrapper>
