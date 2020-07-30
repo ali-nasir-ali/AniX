@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Anime from "./pages/Anime";
 import TopAnimes from "./pages/TopAnimes";
-import RecentAnimes from "./pages/RecentAnimes";
+import PopularAnimes from "./pages/PopularAnimes";
 import SearchResults from "./pages/SearchResults";
 
 // components
@@ -20,7 +20,7 @@ export default () => (
       <Route path="/search/:term" component={SearchResults} />
       <Route path="/:collection/:slug" component={Anime} />
       <Route path="/topanimes" component={TopAnimes} />
-      <Route path="/recentanimes" component={RecentAnimes} />
+      <Route path="/popularanimes" component={PopularAnimes} />
       <Route path="/" component={Home} />
     </Switch>
   </Router>

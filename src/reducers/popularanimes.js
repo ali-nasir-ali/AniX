@@ -1,29 +1,29 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import db from "../firebase";
 
-export const getRecommendedAnimes = createAsyncThunk(
-  "recommended/getRecommendedAnimes",
+export const getPopularAnimes = createAsyncThunk(
+  "recent/getPopularAnimes",
   async () => {
     const animes = [];
-    const snapshot = await db.collection("animes").limit(20).get();
+    const snapshot = await db.collection("popularanimes").get();
     snapshot.forEach((doc) => animes.push(doc.data()));
     return animes;
   }
 );
 
-const recommendedSlice = createSlice({
-  name: "recommended",
+const popularAnimesSlice = createSlice({
+  name: "popularanimes",
   initialState: {
     isFetching: true,
     animes: [],
   },
   reducers: {},
   extraReducers: {
-    [getRecommendedAnimes.fulfilled]: (state, action) => {
+    [getPopularAnimes.fulfilled]: (state, action) => {
       state.animes = action.payload;
       state.isFetching = false;
     },
   },
 });
 
-export default recommendedSlice.reducer;
+export default popularAnimesSlice.reducer;

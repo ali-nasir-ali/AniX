@@ -25,7 +25,7 @@ const NavbarWrapper = styled.div`
     width: 65px;
     height: 65px;
     height: 60px;
-		position: relative;
+    position: relative;
     top: 5px;
   }
 
@@ -65,9 +65,9 @@ const NavbarWrapper = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-		input {
-			display: none;
-		}
+    input {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 430px) {
@@ -86,13 +86,18 @@ const Navbar = () => {
         <nav>
           <ul>
             <li>
+              <NavLink exact activeClassName="nav-active" to="/">
+                Home
+              </NavLink>
+            </li>
+            <li>
               <NavLink activeClassName="nav-active" to="/topanimes">
                 Hall of Fame
               </NavLink>
             </li>
             <li>
-              <NavLink activeClassName="nav-active" to="/recentanimes">
-                Recent
+              <NavLink activeClassName="nav-active" to="/popularanimes">
+                Popular
               </NavLink>
             </li>
             <li>
