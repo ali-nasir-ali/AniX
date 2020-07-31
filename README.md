@@ -53,6 +53,10 @@ REACT_APP_APPID=[x]
 
 3. Then run <code>npm i && npm start</code> to see AniX in action.
 
+## Watch the Demo
+
+[![Video](screenshots/anime_banner.png)](https://www.youtube.com/watch?v=1SRaXipnfgU "Anix Demo")
+
 ## UI
 
 ### Home

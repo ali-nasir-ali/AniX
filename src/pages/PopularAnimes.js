@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <Container>
       <Helmet>
-        <title>React Animes &bull; AniX</title>
+        <title>Popular Animes &bull; AniX</title>
       </Helmet>
 
       <h2>Popular Animes</h2>

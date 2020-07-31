@@ -16,6 +16,7 @@ const InputWrapper = styled.div`
   .label {
     font-size: 1.2rem;
     padding-bottom: 0.5rem;
+    color: ${(props) => props.theme.white};
   }
 
   ${(props) =>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import Container from "../styles/Container";
 import useSearch from "../hooks/useSearch";
@@ -16,6 +17,9 @@ const SearchResults = () => {
 
   return (
     <Container>
+      <Helmet>
+        <title>{term} &bull; AniX</title>
+      </Helmet>
       <h2>Search Results</h2>
       <AnimeGrid>
         {animes.map((anime, idx) => (
