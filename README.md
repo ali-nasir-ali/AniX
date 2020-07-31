@@ -10,16 +10,17 @@ The scraped links are stored in firestore. The data about animes such as title, 
 
 ## Core Packages
 
-| Package						| For                        | 
-|-------------------|----------------------------|
-| Redux Toolkit     | State Management           | 
-| React Redux       | Redux bindings for ReactJS | 
-| Styled Components | Styling										 | 
-| React Router      | Routing           				 | 
-| Firebase          | Firebase SDK      				 | 
-| Scrapy (python)   | Scraping                   | 
+| Package           | For                        |
+| ----------------- | -------------------------- |
+| Redux Toolkit     | State Management           |
+| React Redux       | Redux bindings for ReactJS |
+| Styled Components | Styling                    |
+| React Router      | Routing                    |
+| Firebase          | Firebase SDK               |
+| Scrapy (python)   | Scraping                   |
 
 ## Features
+
 1. Search animes
 2. Get recent animes
 3. Get top rated animes
@@ -31,10 +32,11 @@ The scraped links are stored in firestore. The data about animes such as title, 
 ## Running Locally
 
 1. To run AniX locally in your machine:
-	 - You need to setup a firebase project and also get your scraper hosted on heroku or scrapinghub.
+
+   - You need to setup a firebase project and also get your scraper hosted on heroku or scrapinghub.
 
 2. At the root of this project, create a .env file and make sure to provide the values for the following .env variables.
-		
+
 ```javascript
 # python scraper hosted url
 REACT_APP_SCRAPER=[x]
@@ -48,6 +50,39 @@ REACT_APP_STORAGEBUCKET=[x]
 REACT_APP_MESSAGINGSENDERID=[x]
 REACT_APP_APPID=[x]
 ```
+
 3. Then run <code>npm i && npm start</code> to see AniX in action.
 
 ## UI
+
+### Home
+
+![Home](screenshots/home.png)
+
+![Home Light](screenshots/home_light.png)
+
+### Popular Animes
+
+![Popular Animes](screenshots/popular.png)
+
+### Anime
+
+![Anime Banner](screenshots/anime_banner.png)
+
+### Anime Overview
+
+![Anime Overview](screenshots/anime_overview.png)
+
+### Player
+
+![Player](screenshots/player.png)
+
+![Player Light](screenshots/player_light.png)
+
+### Search Results
+
+![Search Results](screenshots/search_results.png)
+
+## Mobile
+
+![Mobile](screenshots/mobile.png)

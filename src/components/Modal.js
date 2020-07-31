@@ -30,6 +30,10 @@ const ModalWrapper = styled.div`
   .close-icon {
     margin: 1rem;
   }
+
+  .close-icon svg {
+    fill: ${(props) => props.theme.orange};
+  }
 `;
 
 const Modal = ({ children }) => {

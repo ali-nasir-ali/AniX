@@ -28,7 +28,7 @@ const BottomTabWrapper = styled.div`
 
   .input-modal-content {
     width: 90%;
-    margin: 200px auto;
+    margin: 100px auto;
   }
 
   @media screen and (max-width: 430px) {
